@@ -1,4 +1,5 @@
 console.log("Esto es un mensaje en consola.");
+console.log("Hola, Mundo!");
 alert("Esto es una alerta.");
 document.write("<h1>Esto es un header insertado desde JS.</h1>");
 console.error("Mi error customizado. Esto es un mensaje de errores.");
@@ -136,15 +137,23 @@ for (var i = 0; i < nombres.length; i++){ // Ciclo For
 }
 
 // Funciones
-var nombre = 'Ernesto';
+var nombre = 'Ernesto', edad;
 greetingNombre('Ernesto'); // Llamado a funcion con argumentos
 greeting(); // Llamado a función sin argumentos
 function greetingNombre(nombre){ // Funcion con parámetros de paso por valor
-  console.log("Hola, " + nombre + ". ¿Cómo estás?");
+  alert("Hola, " + nombre + ". ¿Cómo estás?");
   return;
 }
 function greeting(){ // Función sin parámetros
   console.log("Hola, ¿Cómo estás?");
   return;
 }
+edad = prompt("Ingresa tu edad: "); // Muestra un prompt para ingresar un dato
+if (edad >= 18){
+  alert("Eres mayor de edad.");
+}
+else{
+  alert("Eres menor de edad.");
+}
 // Los primitivos se pasan por valor y los arreglos u objetos se pasan por referencia
+
