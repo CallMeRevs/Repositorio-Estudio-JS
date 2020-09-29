@@ -3,37 +3,57 @@
   <head>
     <meta charset="utf-8">
     <title>Estadisticas COVID-19</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div class="">
-      <h1>Estadisticas del COVID-19</h1>
-      <b>Fecha: </b><input id="inputFecha" type="date" name="" value=""><br>
-      <br>
-      <b>País: </b>
-        <select id="selectPais">
-          <option value="germany">Alemania</option>
-          <option value="spain">España</option>
-          <option value="mexico">México</option>
-          <option value="us">EEUUAA</option>
-        </select><br>
-        <br>
-        <button type="button" id="btnCargar">Cargar Estadísticas</button><br>
-        <ul>
-          <li>Fuente: <span id="source"></span>.</li>
-          <li>Confirmados: <span id="today_confirmed"></span>.</li>
-          <li>Total de muertes: <span id="today_deaths"></span>.</li>
-          <li>Nuevos confirmados: <span id="today_new_confirmed"></span>.</li>
-          <li>Nuevas Muertes: <span id="today_new_deaths"></span>.</li>
-          <li>Nuevos casos: <span id="today_new_open_cases"></span>.</li>
-          <li>Nuevos recuperados: <span id="today_new_recovered"></span>.</li>
-          <li>Casos activos: <span id="today_open_cases"></span>.</li>
-          <li>Total de recuperados: <span id="today_recovered"></span>.</li>
+    <div class="container-fluid rounded bg-dark text-white">
+      <div class="container">
+        <h1 class="display-4 text-center">Estadísticas del COVID-19</h1>
+        <p class="lead text-left">Portal para consultar las estadísticas más importantes relacionadas a la pandemia actual.</p>
+      </div>
+      <div class="container bg-dark">
+        <div class="input-group mb-3">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend rounded bg-dark">
+                <span class="input-group-text bg-dark text-light border-dark" id="inputGroup-sizing-sm">Fecha: </span>
+                <input id="inputFecha" type="date" name="" value="" class="rounded">
+            </div>
+          </div>
+          <div class="input-group-prepend rounded">
+              <span class="input-group-text bg-dark text-light border-dark" id="inputGroup-sizing-sm">Pais:  </span>
+              <select class="custom-select" id="selectPais">
+                <option selected>Elegir...</option>
+                <option value="germany">Alemania</option>
+                <option value="spain">España</option>
+                <option value="mexico">México</option>
+                <option value="us">EEUUAA</option>
+              </select>
+          </div>
+        </div>
+      </div>
+      <div class="container bg-dark">
+        <button type="button" class="btn btn-secondary rounded btn-lg" id="btnCargar">Cargar estadísticas</button><br>
+        <p></p>
+        <ul class="list-group">
+          <li class="list-group-item text-dark">Fuente: <span id="source" class="text-danger font-weight-bold"></span>.</li>
+          <li class="list-group-item text-dark">Confirmados: <span id="today_confirmed" class="text-danger font-weight-bold"></span>.</li>
+          <li class="list-group-item text-dark">Total de muertes: <span id="today_deaths" class="text-danger font-weight-bold"></span>.</li>
+          <li class="list-group-item text-dark">Nuevos confirmados: <span id="today_new_confirmed" class="text-danger font-weight-bold"></span>.</li>
+          <li class="list-group-item text-dark">Nuevas muertes: <span id="today_new_deaths" class="text-danger font-weight-bold"></span>.</li>
+          <li class="list-group-item text-dark">Nuevos casos: <span id="today_new_open_cases" class="text-danger font-weight-bold"></span>.</li>
+          <li class="list-group-item text-dark">Nuevos recuperados: <span id="today_new_recovered" class="text-danger font-weight-bold"></span>.</li>
+          <li class="list-group-item text-dark">Casos activos: <span id="today_open_cases" class="text-danger font-weight-bold"></span>.</li>
+          <li class="list-group-item text-dark">Total de recuperados: <span id="today_recovered" class="text-danger font-weight-bold"></span>.</li>
         </ul>
-
-
-
+      </div>
+      <div class="card-footer font-italic text-center text-light">
+        Realizado por Revs
+      </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src="covidScript.js" charset="utf-8"></script>
   </body>
 </html>
