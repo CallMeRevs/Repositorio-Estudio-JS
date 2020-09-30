@@ -1,0 +1,10 @@
+** Hay que tener instalado NODE.JS
+npm install -g cordova
+** En el directorio donde se encuentra el proyecto ejecutar en CMD
+cordova create MyApp
+** Entrar al directorio MyApp y colocar en consola
+cordova platform add android
+** En la carpeta WWW colocar el contenido de la app hibrida
+** Compilar todo para un apliacion android con el comando
+cordova build android
+** Revisar el estado de las variables de entorno para JDK, JRE, Gradle y _JAVA_OPTIONS (-Xmx512M)
